@@ -1,0 +1,51 @@
+# grep through history
+function hf() { 
+	history | grep $1
+}
+
+# appends your key to a server's authorized keys file
+function authme {
+	ssh $1 'cat >>.ssh/authorized_keys' <~/.ssh/id_rsa.pub
+}
+
+# opens new tab in terminal to same directory as current
+function nt {
+  terminal_clone_command="
+tell application \"Terminal\"
+  tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+  do script with command \"cd `pwd`; clear\" in  selected tab of the front window
+end tell
+"
+  echo "$terminal_clone_command" | osascript &>/dev/null
+}
+
+###### Prompt colors and git branch
+function parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+mkcd(){
+    mkdir -p "${1}"
+    cd "${1}"
+}
+
+extract(){
+    if [ -f $1 ] ; then
+            case $1 in
+                    *.tar.bz2)   tar xvjf $1    ;;
+                    *.tar.gz)    tar xvzf $1    ;;
+                    *.bz2)       bunzip2 $1     ;;
+                    *.rar)       unrar x $1     ;;
+                    *.gz)        gunzip $1      ;;
+                    *.tar)       tar xvf $1     ;;
+                    *.tbz2)      tar xvjf $1    ;;
+                    *.tgz)       tar xvzf $1    ;;
+                    *.zip)       unzip $1       ;;
+                    *.Z)         uncompress $1  ;;
+                    *.7z)        7z x $1        ;;
+                    *)           echo "Unable to extract '$1'" ;;
+            esac
+    else
+            echo "'$1' is not a valid file"
+    fi
+}
