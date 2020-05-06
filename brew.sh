@@ -14,6 +14,7 @@ BREW_PREFIX=$(brew --prefix)
 
 brew install hub
 brew cask install iterm2
+brew cask install shiftit
 brew install zsh
 
 brew install azure-cli
@@ -21,6 +22,7 @@ brew install helm
 brew install jq
 brew install watch
 brew install screen
+brew cask install sublime-text
 brew install ssh-copy-id
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
