@@ -1,9 +1,9 @@
 #alias git=hub
-alias reload='. ~/.bashrc'
+alias reload='. ~/.bash_profile'
 
 alias '..'='cd ..'
 
-alias clone='cd ~/repos && git clone $1'
+alias clone='cdgit && git clone $1'
 
 # General
 alias l='ls -lah'
@@ -14,7 +14,7 @@ alias tf='tail -f -n 100'
 alias httpdump='sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET \/.*"'
 
 # GIT
-alias cdgit='cd /Users/shburges/git'
+alias cdgit='cd /Users/shayneburgess/git'
 alias gb='git branch'
 alias gl='git log'
 alias glo='git log --oneline'
