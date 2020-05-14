@@ -15,6 +15,7 @@ alias httpdump='sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E "Host\: .*|GET 
 
 # GIT
 alias cdgit='cd /Users/shayneburgess/git'
+alias cdgithub='cd /Users/shayneburgess/git/go/src/github.com/github'
 alias gb='git branch'
 alias gl='git log'
 alias glo='git log --oneline'
