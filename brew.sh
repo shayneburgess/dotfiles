@@ -17,6 +17,10 @@ brew cask install iterm2
 brew cask install shiftit
 brew install zsh
 
+brew install wget
+brew install gh
+brew install golang
+
 brew install azure-cli
 brew install helm
 brew install jq

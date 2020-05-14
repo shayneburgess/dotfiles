@@ -39,7 +39,7 @@ alias kcgp='kubectl get pods'
 alias kcgs='kubectl get services'
 alias kcgd='kubectl get deployments'
 
-alias cdgo="cd /Users/shburges/git/go/src"
+alias cdgo="cd /Users/shayneburgess/git/go/src"
 export GOPATH=$HOME/git/go # don't forget to change your path correctly!
 export GOROOT=/usr/local/opt/go/libexec
 export GOBIN=$GOPATH/bin
